@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="./JSFRONT/formimg.js"></script>
+</body>
+</head>
+<body class="bg-gray-200 py-10 px-5">
+    <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+        <div class="md:flex">
+            <div class="md:flex-shrink-0">
+                <img class="h-48 w-full object-cover md:w-48" id="profile-img" alt="Profile picture">
+            </div>
+            <div class="p-8">
+                <form id="profile-form">
+                    <div class="mb-5">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="profile-picture">Changer la photo de profil</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="profile-picture" type="file" accept="image/*">
+                    </div>
+                    <div class="mb-5">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Nouveau mot de passe</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="********">
+                    </div>
+                    <div class="mb-5">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="confirm-password">Confirmer le nouveau mot de passe</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="confirm-password" type="password" placeholder="********">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Sauvegarder
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
