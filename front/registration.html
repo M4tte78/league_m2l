@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Bootstrap-4-Calendar-No-Custom-Code.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
-    <form method="post" action="register.php"></form>
 </head>
 
 <body>
@@ -31,10 +30,10 @@
                 <div class="block-heading">
                     <h2 class="text-info">Créer un compte m2l</h2>
                     <p></p>
-                    <form action="http://localhost:8081/user/registration" method="post">
+                    <form id="registerForm">
                         <div class="mb-3">
                             <label class="form-label" for="username">Nom</label>
-                            <input class="form-control item" type="text" id="username" name="username" data-bs-theme="light">
+                            <input class="form-control item" type="text" id="name" name="name" data-bs-theme="light">
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="password">Password</label>
@@ -45,7 +44,6 @@
                             <input class="form-control item" type="email" id="email" name="email" data-bs-theme="light">
                         </div>
                         <button class="btn btn-primary" type="submit">Sign Up</button>
-                    </form>
                     </form>
         </section>
     </main>
@@ -94,6 +92,7 @@
     <script src="assets/js/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="./JSFRONT/register.js"></script>
 </body>
 
 </html>
