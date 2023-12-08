@@ -3,7 +3,7 @@ const router = express.Router();
 const config = require('../config/db');
 const mysql = require('mysql');
 const bcrypt = require('bcrypt');
-const { generateToken } = require('../midleware/jwtutils'); 
+const { generateToken } = require('../midleware/jwtUtils'); 
 
 const db = mysql.createConnection({
     host: 'localhost', 

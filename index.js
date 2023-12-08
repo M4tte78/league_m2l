@@ -10,11 +10,11 @@ const logRoutes = require('./back/api/routes/log');
 const userRoutes = require('./back/api/routes/user');
 const authRoutes = require('./back/api/midleware/tokenmid');
 const token = require('./back/api/routes/token')
-const { generateToken } = require('./back/api/middlewares/jwtUtils');
+const  generateToken  = require('./back/api/midleware/jwtUtils');
 const corsOptions = {
   origin: ['http://localhost:5500', 'http://127.0.0.1:5500'], // Allow both origins
   methods: 'GET,PUT,POST,DELETE',
-  allowedHeaders: 'Content-Type, Authorization, Access-Control-Allow-Origin',
+  allowedHeaders: 'Content-Type, x-access-token, Authorization, Access-Control-Allow-Origin',
   credentials: true, // This allows cookies to be sent with the CORS request
 }
 
@@ -33,7 +33,7 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false } // set to true if your using https
 }));
-app.use('/jwsUtils', jwsutils);
+
 app.use('/token', token);
 app.use('/tokenmid', authRoutes);
 app.use(cookieParser()); 

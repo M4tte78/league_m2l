@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
-
+    <script>document.addEventListener("DOMContentLoaded", function() {
+        const token = localStorage.getItem('token');
+    
+        if (!token) {
+            window.location.href = '/league_m2l/front/login.html';
+        }
+    });</script>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">

@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 password: password
             };
 
-            fetch('http://localhost:3000/log/login', {
+            fetch('http://localhost:3001/log/login', {
                 method: 'POST',
                 mode: 'cors',
                 headers: {
@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(data => {
                 console.log(data);
                 if (data.message === 'User logged in') {
+                    const token = data.token;
+                    // Stocker le token dans le localStorage
+                    localStorage.setItem('token', token);
                     window.location.href = '/league_m2l/front/index.html';
                 }
             })
